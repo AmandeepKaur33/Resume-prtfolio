@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 80px;
+    position: fixed;
+    width: 100%;
+}
+.navbar.scrolled {
+    background-color: #004225 !important;
+    transition: background-color 200ms linear;
+}
+.navbar .logo{
+    font-size: 33px;
+    color: #004225;
+    font-weight: 600;
+}
+.navbar .logo.scrolled{
+    color: white;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+.navbar ul li{
+    margin: 0 10px;
+}
+.navbar ul li .links{
+    color: #004225;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.navbar ul li .links.scrolled{
+    color: #fff;
+}
+.navbar .menu-btn i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+#click{
+    display: none;
+}
+@media (max-width: 940px){
+    .navbar ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #004225;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    .navbar{
+        background: #004225;
+        top: 0;
+    }
+    #click:checked ~ ul{
+        left: 0;
+    }
+    .navbar ul li{
+        margin: 40px 0;
+    }
+    .navbar ul li .links{
+        font-size: 2rem;
+        display: block;
+        color: #fff;
+    }
+    .navbar .menu-btn i{
+        display: block;
+        transition: 0.4s all ease-in-out;
+        color: #fff;
+    }
+    .navbar .logo{
+        color: #fff;
+    }
+    #click:checked ~ .menu-btn i::before{
+        content: "\f00d";
+    }
+    .home-section{
+        flex-direction: column-reverse;
+        margin-top: 70px;
+        height: 150vh;
+    }
+    .home-section .home-inner{
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+    }
+    .home-section .home-inner .home-left h1, p{
+        text-align: center;
+    }
+    .about-section{
+        height: 200vh;
+    }
+    .about-section .salad-container{
+        flex-direction: column;
+        height: 80%;
+    }
+    .shop-section{
+        height: 90vh;
+    }
+    .customer-section{
+        height: 250vh;
+    }
+    .customer-section .customer-container{
+        flex-direction: column;
+        height: 80%;
+        width: 100%;
+    }
+    .customer-section .customer-container .cust{
+        height: 30%;
+        width: 100%;
+    }
+    .shop-section .shop-container .shop img{
+        height: 100px;
+    }
+    .contact-section{
+        height: 180vh;
+    }
+    .contact-section .contact-form{
+        flex-direction: column;
+        width: 100%;
+        height: 90%;
+    }
+    .contact-section .contact-form .touch-info{
+        width: 90%;
+        border-left: 2px solid #004225;
+    }
+    .contact-section .contact-form .touch-info h3{
+        font-size: 3rem;
+    }
+    .contact-section .contact-form .touch-info p{
+        margin-bottom: .7rem;
+    }
+    .contact-section .contact-form .touch-info a{
+        text-align: center;
+    }
+    .contact-section .contact-form .form-info{
+        width: 100%;
+    }
+    footer{
+        background: #004225;
+        color: #fff;
+    }
+}
+@media only screen and (min-width: 940px) and (max-width: 1270px){
+    .shop-section{
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        padding-top:  0;
+    }
+    .shop-section .shop-container .shop img{
+        height: 180px;
+    }
+    .home-section .home-inner .home-left h1, p{
+        text-align: center;
+    }
+}
